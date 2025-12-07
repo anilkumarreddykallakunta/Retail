@@ -19,7 +19,7 @@ const FilterBar = ({ filters, setFilters, sortConfig, setSortConfig }) => {
         value={filters.region || ''}
         onChange={(e) => handleFilterChange('region', e.target.value)}
       >
-        <option value="">All Regions</option>
+        <option value="">Customer Regions</option>
         <option value="North">North</option>
         <option value="South">South</option>
         <option value="East">East</option>
@@ -32,7 +32,7 @@ const FilterBar = ({ filters, setFilters, sortConfig, setSortConfig }) => {
         value={filters.gender || ''}
         onChange={(e) => handleFilterChange('gender', e.target.value)}
       >
-        <option value="">All Genders</option>
+        <option value="">Genders</option>
         <option value="Male">Male</option>
         <option value="Female">Female</option>
       </select>
@@ -43,7 +43,7 @@ const FilterBar = ({ filters, setFilters, sortConfig, setSortConfig }) => {
         value={filters.age || ''}
         onChange={(e) => handleFilterChange('age', e.target.value)}
       >
-        <option value="">All Ages</option>
+        <option value="">Age Range</option>
         <option value="25">25</option>
         <option value="35">35</option>
         <option value="45">45</option>
@@ -55,7 +55,7 @@ const FilterBar = ({ filters, setFilters, sortConfig, setSortConfig }) => {
         value={filters.category || ''}
         onChange={(e) => handleFilterChange('category', e.target.value)}
       >
-        <option value="">All Categories</option>
+        <option value="">Product Category</option>
         <option value="Clothing">Clothing</option>
         <option value="Electronics">Electronics</option>
         <option value="Home">Home</option>
@@ -68,13 +68,33 @@ const FilterBar = ({ filters, setFilters, sortConfig, setSortConfig }) => {
         value={sortConfig || ''}
         onChange={handleSortChange}
       >
-        <option value="">Sort By</option>
-        <option value="date">Date</option>
-        <option value="amount">Amount</option>
-        <option value="quantity">Quantity</option>
-        <option value="age">Age</option>
+        <option value="">Tags</option>
+        <option value="tshirt">T-shirt</option>
+        <option value="shirt">shirt</option>
+        <option value="pants">Pants</option>
+      
       </select>
-
+<select 
+        className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-600 focus:border-blue-500 outline-none cursor-pointer"
+        value={sortConfig || ''}
+        onChange={handleSortChange}
+      >
+        <option value="">Payment Method</option>
+        <option value="cash">cash</option>
+        <option value="upi">UPI</option>
+        <option value="emi">EMI</option>
+      
+      </select>
+      <select 
+        className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-600 focus:border-blue-500 outline-none cursor-pointer"
+        value={sortConfig || ''}
+        onChange={handleSortChange}
+      >
+        <option value="">Date</option>
+        <option value="date">2024</option>
+       
+      
+      </select>
     </div>
   );
 };
