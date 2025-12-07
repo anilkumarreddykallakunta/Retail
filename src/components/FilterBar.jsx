@@ -85,16 +85,7 @@ const FilterBar = ({ filters, setFilters, sortConfig, setSortConfig }) => {
         <option value="emi">EMI</option>
       
       </select>
-      <select 
-        className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-600 focus:border-blue-500 outline-none cursor-pointer"
-        value={sortConfig || ''}
-        onChange={handleSortChange}
-      >
-        <option value="">Date</option>
-        <option value="date">2024</option>
-       
-      
-      </select>
+     
     </div>
   );
 };
